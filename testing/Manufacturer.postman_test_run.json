@@ -1,0 +1,304 @@
+{
+	"id": "db58a317-e42f-403f-a920-465a1ecbfc5e",
+	"name": "Manufacturer",
+	"timestamp": "2020-04-26T13:44:15.373Z",
+	"collection_id": "93af5ca4-ce4d-40a6-a840-0de74d26aa86",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "07a7f7f0-0d22-4bfa-8e40-e6c57c87e04a",
+			"name": "1.0 Admin Login",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/user/login",
+			"time": 26,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				26
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "15b9138c-8958-45e2-980f-a820d95f813e",
+			"name": "1.1 Manufacturerliste anzeigen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/list",
+			"time": 132,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				132
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "02c90b14-7883-468a-be76-8427105bffc9",
+			"name": "1.2 Manufacturer lesen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/read?uuid=4fd231f2-4b3c-4185-942e-f705ce13aea5",
+			"time": 50,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				50
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5d75b2c4-f9f1-4e04-bba4-b769399d64db",
+			"name": "1.3 Manufacturer erschaffen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/create",
+			"time": 87,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				87
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1adc3312-5901-40be-8c03-ab071a2ff68b",
+			"name": "1.4 Manufacturer updaten",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/update",
+			"time": 186,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				186
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ce10b803-9653-4ddc-bd31-61c73f364d7d",
+			"name": "2.1 Unbekanntes Manufacturer lesen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/read?uuid=ab27c9b3-9f28-4931-80a8-66949b8fd1c9",
+			"time": 40,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				40
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "20af2724-0e5c-4027-9cce-85366f4e1ef9",
+			"name": "2.2 Unbekanntes Manufacturer update",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/update",
+			"time": 19,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				19
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "9fd8bce6-5b36-4d76-bd86-000a13fb1677",
+			"name": "3.1 Formal falsch Werte eingeben und erschaffen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/create",
+			"time": 31,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				31
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "69f6169d-6d7a-43fe-919b-7ed629001512",
+			"name": "4.2 Formal falsch Werte eingeben und updaten",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/update",
+			"time": 110,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				110
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "83210b15-cb4b-41af-a60d-6c8dd77d112a",
+			"name": "4.3 Formal falsch Werte eingeben und updaten",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/update",
+			"time": 30,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				30
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "894eab13-05e3-4af2-9fde-2846b483b360",
+			"name": "4.4 Formal falsch Werte eingeben und updaten",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/update",
+			"time": 33,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				33
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e03fd82d-e062-42ae-8d87-b5073abeeaca",
+			"name": "4.5 Formal falsch Werte eingeben und updaten",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/update",
+			"time": 115,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				115
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7c429eab-591d-4b0f-bed7-1cb78e0330ca",
+			"name": "5.0 Admin Logout",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/user/logout",
+			"time": 119,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				119
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 978,
+	"collection": {
+		"requests": [
+			{
+				"id": "07a7f7f0-0d22-4bfa-8e40-e6c57c87e04a",
+				"method": "POST"
+			},
+			{
+				"id": "15b9138c-8958-45e2-980f-a820d95f813e",
+				"method": "GET"
+			},
+			{
+				"id": "02c90b14-7883-468a-be76-8427105bffc9",
+				"method": "GET"
+			},
+			{
+				"id": "5d75b2c4-f9f1-4e04-bba4-b769399d64db",
+				"method": "POST"
+			},
+			{
+				"id": "1adc3312-5901-40be-8c03-ab071a2ff68b",
+				"method": "PUT"
+			},
+			{
+				"id": "ce10b803-9653-4ddc-bd31-61c73f364d7d",
+				"method": "GET"
+			},
+			{
+				"id": "20af2724-0e5c-4027-9cce-85366f4e1ef9",
+				"method": "PUT"
+			},
+			{
+				"id": "9fd8bce6-5b36-4d76-bd86-000a13fb1677",
+				"method": "POST"
+			},
+			{
+				"id": "69f6169d-6d7a-43fe-919b-7ed629001512",
+				"method": "PUT"
+			},
+			{
+				"id": "83210b15-cb4b-41af-a60d-6c8dd77d112a",
+				"method": "PUT"
+			},
+			{
+				"id": "894eab13-05e3-4af2-9fde-2846b483b360",
+				"method": "PUT"
+			},
+			{
+				"id": "e03fd82d-e062-42ae-8d87-b5073abeeaca",
+				"method": "PUT"
+			},
+			{
+				"id": "7c429eab-591d-4b0f-bed7-1cb78e0330ca",
+				"method": "DELETE"
+			}
+		]
+	}
+}

@@ -1,0 +1,480 @@
+{
+	"info": {
+		"_postman_id": "93af5ca4-ce4d-40a6-a840-0de74d26aa86",
+		"name": "Manufacturer",
+		"description": "ManufacturerService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": " 1 GÜLTIGE, KORREKTE INPUTWERT",
+			"item": [
+				{
+					"name": "1.0 Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "sunny",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "geheim",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"user",
+								"login"
+							]
+						},
+						"description": "Login"
+					},
+					"response": []
+				},
+				{
+					"name": "1.1 Manufacturerliste anzeigen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"manufacturer",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.2 Manufacturer lesen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/read?uuid=4fd231f2-4b3c-4185-942e-f705ce13aea5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"manufacturer",
+								"read"
+							],
+							"query": [
+								{
+									"key": "uuid",
+									"value": "4fd231f2-4b3c-4185-942e-f705ce13aea5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.3 Manufacturer erschaffen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Oppo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"manufacturer",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.4 Manufacturer updaten",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "manufacturerUUID",
+									"value": "c1d75575-cdf8-43ab-8e43-3bf34feadfc5",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Vivo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"manufacturer",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ad7c0f8a-7d2b-4267-897f-60dffd6cc7d5",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "712e25db-95bd-4dd8-a8cc-0af487f42c02",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "2 FEHLERSITUATIONEN TESTEN",
+			"item": [
+				{
+					"name": "2.1 Unbekanntes Manufacturer lesen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/read?uuid=ab27c9b3-9f28-4931-80a8-66949b8fd1c9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"manufacturer",
+								"read"
+							],
+							"query": [
+								{
+									"key": "uuid",
+									"value": "ab27c9b3-9f28-4931-80a8-66949b8fd1c9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.2 Unbekanntes Manufacturer update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "uuid",
+									"value": "ab27c9b3-9f28-4931-80a8-66949b8fd1c9",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "HaiFisch",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"manufacturer",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "3+4 FORMAL FALSCHE EINGABEWERTE",
+			"item": [
+				{
+					"name": "3.1 Formal falsch Werte eingeben und erschaffen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"manufacturer",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4.2 Formal falsch Werte eingeben und updaten",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fba",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Vivo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"manufacturer",
+								"update"
+							]
+						},
+						"description": "UUID zu kurz"
+					},
+					"response": []
+				},
+				{
+					"name": "4.3 Formal falsch Werte eingeben und updaten",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbaffghfghj",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Vivo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"manufacturer",
+								"update"
+							]
+						},
+						"description": "UUID zu gross"
+					},
+					"response": []
+				},
+				{
+					"name": "4.4 Formal falsch Werte eingeben und updaten",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "V",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"manufacturer",
+								"update"
+							]
+						},
+						"description": "name zu kurz"
+					},
+					"response": []
+				},
+				{
+					"name": "4.5 Formal falsch Werte eingeben und updaten",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "qwertzuioplkjhgfdsayxcvbnmlkjhgfdsaqwertzuioplkjhdffvbbffbfbbfbfsdsddddjkaljlsakjldkksmvlkdmvdvmklvmdvmklmkkmfmkfmkdgrrgrg\n",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/manufacturer/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"manufacturer",
+								"update"
+							]
+						},
+						"description": "name zu gross"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "5.0 Admin Logout",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/user/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Handy_Laden_war_exploded",
+						"resource",
+						"user",
+						"logout"
+					]
+				},
+				"description": "Login"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

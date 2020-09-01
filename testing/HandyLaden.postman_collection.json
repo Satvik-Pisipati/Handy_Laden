@@ -1,0 +1,1476 @@
+{
+	"info": {
+		"_postman_id": "52960692-6292-4733-8554-a62f4b461cf3",
+		"name": "HandyLaden",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1 GÜLTIGE, KORREKTE INPUTWERT",
+			"item": [
+				{
+					"name": "1.0 Login as Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "sunny",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "geheim",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"user",
+								"login"
+							]
+						},
+						"description": "Admin login"
+					},
+					"response": []
+				},
+				{
+					"name": "1.1 Handyliste anzeigen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"list"
+							]
+						},
+						"description": "Alle Handy gemäss Testdaten"
+					},
+					"response": []
+				},
+				{
+					"name": "1.2 Ein Handy lesen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/read?uuid=7fd86b92-4b48-4322-aa79-f70cc1f2595f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"read"
+							],
+							"query": [
+								{
+									"key": "uuid",
+									"value": "7fd86b92-4b48-4322-aa79-f70cc1f2595f"
+								}
+							]
+						},
+						"description": "UUID angeben\n\nHandy daten werden angezeigt"
+					},
+					"response": []
+				},
+				{
+					"name": "1.3 Neues Handy einfügen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mate 30 pro",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "8 GB",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "654.00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"create"
+							]
+						},
+						"description": "create Handy"
+					},
+					"response": []
+				},
+				{
+					"name": "1.4 Neues Handy updaten",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phoneUUID",
+									"value": "b7e9ff4e-ea59-4aa8-b40b-094c0a511fee",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Galaxy S20",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "6 GB",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1000.90",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"update"
+							]
+						},
+						"description": "create Handy"
+					},
+					"response": []
+				},
+				{
+					"name": "1.5 Neues Handy löschen",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/delete?phoneUUID=81b4b397-9d54-41b9-917e-6de4d0cc3c57",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "phoneUUID",
+									"value": "81b4b397-9d54-41b9-917e-6de4d0cc3c57"
+								}
+							]
+						},
+						"description": "Handy löschen"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "2 FEHLERSITUATIONEN TESTEN",
+			"item": [
+				{
+					"name": "2.1 Unbekanntes Handy lesen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/read?uuid=ab27c9b3-9f28-4931-80a8-66949b8fd1c9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"read"
+							],
+							"query": [
+								{
+									"key": "uuid",
+									"value": "ab27c9b3-9f28-4931-80a8-66949b8fd1c9"
+								}
+							]
+						},
+						"description": "UUID angeben\n\nHandy daten werden angezeigt"
+					},
+					"response": []
+				},
+				{
+					"name": "2.2 Unbekanntes Handy löschen",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/delete?phoneUUID=ab27c9b3-9f28-4931-80a8-66949b8fd1c9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "phoneUUID",
+									"value": "ab27c9b3-9f28-4931-80a8-66949b8fd1c9"
+								}
+							]
+						},
+						"description": "Handy löschen"
+					},
+					"response": []
+				},
+				{
+					"name": "2.3 Unbekanntes Handy ändern",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mate 20 pro",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "6 GB",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "624.00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								},
+								{
+									"key": "phoneUUID",
+									"value": "ab27c9b3-9f28-4931-80a8-66949b8fd1c9",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"update"
+							]
+						},
+						"description": "create Handy"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "3+4+5 FORMAL FALSCHE EINGABEWERTE",
+			"item": [
+				{
+					"name": "3.1 Formal falsche Eingabewerte händy einfügen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mate 30 pro",
+									"type": "text"
+								},
+								{
+									"key": "ram ",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "654.00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"create"
+							]
+						},
+						"description": "ram falsch eingeben"
+					},
+					"response": []
+				},
+				{
+					"name": "3.2 Formal falsche Eingabewerte händy einfügen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mate 30 pro",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "8 GB",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "654.00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"create"
+							]
+						},
+						"description": "rom falsch eingeben"
+					},
+					"response": []
+				},
+				{
+					"name": "3.3 Formal falsche Eingabewerte händy einfügen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mate 30 pro",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "8 GB",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "10.00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"create"
+							]
+						},
+						"description": "Preis zu klein"
+					},
+					"response": []
+				},
+				{
+					"name": "3.4 Formal falsche Eingabewerte händy einfügen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mate 30 pro",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "8 GB",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "70000.00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"create"
+							]
+						},
+						"description": "preis zu gross"
+					},
+					"response": []
+				},
+				{
+					"name": "3.5 Formal falsche Eingabewerte händy einfügen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mate 30 pro",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "8 GB",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "ABC",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"create"
+							]
+						},
+						"description": "preis statt Zahlen buchstaben eingeben"
+					},
+					"response": []
+				},
+				{
+					"name": "3.6 Formal falsche Eingabewerte händy einfügen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "M",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "8 GB",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "654.00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"create"
+							]
+						},
+						"description": "name zu klein"
+					},
+					"response": []
+				},
+				{
+					"name": "3.7 Formal falsche Eingabewerte händy einfügen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "8 GB",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "654.00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"create"
+							]
+						},
+						"description": "name zu klein"
+					},
+					"response": []
+				},
+				{
+					"name": "3.8 Formal falsche Eingabewerte händy einfügen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mate 30 pro",
+									"type": "text"
+								},
+								{
+									"key": "ram ",
+									"value": "8 GB",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "654.00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"create"
+							]
+						},
+						"description": "ram falsch eingeben"
+					},
+					"response": []
+				},
+				{
+					"name": "3.9 Formal falsche Eingabewerte händy einfügen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mate 30 pro",
+									"type": "text"
+								},
+								{
+									"key": "ram ",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "654.00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30-laksl7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"create"
+							]
+						},
+						"description": "ram falsch eingeben"
+					},
+					"response": []
+				},
+				{
+					"name": "4.1 Neues Handy updaten",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mate 20 pro",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "624.00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								},
+								{
+									"key": "phoneUUID",
+									"value": "290deb88-4a13-4d2f-92b8-e129e95d2d16",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"update"
+							]
+						},
+						"description": "ram zu kurz"
+					},
+					"response": []
+				},
+				{
+					"name": "4.2 Neues Handy updaten",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mate 20 pro",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "8 GB",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "624.00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								},
+								{
+									"key": "phoneUUID",
+									"value": "290deb88-4a13-4d2f-92b8-e129e95d2d16",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"update"
+							]
+						},
+						"description": "rom zu kurz"
+					},
+					"response": []
+				},
+				{
+					"name": "4.3 Neues Handy updaten",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mate 20 pro",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "8 GB",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "20.50",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								},
+								{
+									"key": "phoneUUID",
+									"value": "290deb88-4a13-4d2f-92b8-e129e95d2d16",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"update"
+							]
+						},
+						"description": "preis zu klein"
+					},
+					"response": []
+				},
+				{
+					"name": "4.4 Neues Handy updaten",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mate 20 pro",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "87547.00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								},
+								{
+									"key": "phoneUUID",
+									"value": "290deb88-4a13-4d2f-92b8-e129e95d2d16",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"update"
+							]
+						},
+						"description": "preis zu gross"
+					},
+					"response": []
+				},
+				{
+					"name": "4.5 Neues Handy updaten",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mate 20 pro",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "Ab",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								},
+								{
+									"key": "phoneUUID",
+									"value": "290deb88-4a13-4d2f-92b8-e129e95d2d16",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"update"
+							]
+						},
+						"description": "preis falsch eingeben"
+					},
+					"response": []
+				},
+				{
+					"name": "4.6 Neues Handy updaten",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "M",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "8 GB",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "624.00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								},
+								{
+									"key": "phoneUUID",
+									"value": "290deb88-4a13-4d2f-92b8-e129e95d2d16",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"update"
+							]
+						},
+						"description": "name zu klein"
+					},
+					"response": []
+				},
+				{
+					"name": "4.7 Neues Handy updaten",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Masdfghjklöässdddsfhjhjfgdfhdsvbdhjvbdjhvbdjvbdhjvbdjhvbhbvhfbehfbfhebfehjbhafbdhfdbfdjhfbfhjdhfbhffafdfdfsfdfdsfsfvv",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "8 GB",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "624.00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30",
+									"type": "text"
+								},
+								{
+									"key": "phoneUUID",
+									"value": "290deb88-4a13-4d2f-92b8-e129e95d2d16",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"update"
+							]
+						},
+						"description": "name zu gross"
+					},
+					"response": []
+				},
+				{
+					"name": "4.8 Neues Handy updaten",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mate 30 Pro",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "8 GB",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "624.00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b-fbad1f287e30-sdhdhs",
+									"type": "text"
+								},
+								{
+									"key": "phoneUUID",
+									"value": "290deb88-4a13-4d2f-92b8-e129e95d2d16",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"update"
+							]
+						},
+						"description": "ManufacturerUUID zu gross"
+					},
+					"response": []
+				},
+				{
+					"name": "4.9 Neues Handy updaten",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mate 30 Pro",
+									"type": "text"
+								},
+								{
+									"key": "ram",
+									"value": "8 GB",
+									"type": "text"
+								},
+								{
+									"key": "rom",
+									"value": "128 GB",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "624.00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerUUID",
+									"value": "a0a9a16b-d539-426e-9a8b",
+									"type": "text"
+								},
+								{
+									"key": "phoneUUID",
+									"value": "290deb88-4a13-4d2f-92b8-e129e95d2d16",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"update"
+							]
+						},
+						"description": "ManufacturerUUID zu klein"
+					},
+					"response": []
+				},
+				{
+					"name": "5.1 Formal falsche Eingabewerte",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/delete?phoneUUID=81b4b397-9d54-41b9-917e6de",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "phoneUUID",
+									"value": "81b4b397-9d54-41b9-917e6de"
+								}
+							]
+						},
+						"description": "UUID zu klein"
+					},
+					"response": []
+				},
+				{
+					"name": "5.2 Formal falsche Eingabewerte",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/delete?phoneUUID=81b4b397-9d54-41b9-917e6de-asddkj",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Handy_Laden_war_exploded",
+								"resource",
+								"phones",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "phoneUUID",
+									"value": "81b4b397-9d54-41b9-917e6de-asddkj"
+								}
+							]
+						},
+						"description": "UUID zu gross"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "953f981e-e5ad-4f9d-a6da-de0539b0abea",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "502097d8-c81f-41d9-935e-e3d7b9bef5c5",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "6.0 Logout as Admin",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Handy_Laden_war_exploded/resource/user/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Handy_Laden_war_exploded",
+						"resource",
+						"user",
+						"logout"
+					]
+				},
+				"description": "Admin login"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

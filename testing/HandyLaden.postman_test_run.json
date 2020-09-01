@@ -1,0 +1,678 @@
+{
+	"id": "1ea6c8e8-c5c0-4a8b-a90b-8868c5590c86",
+	"name": "HandyLaden",
+	"timestamp": "2020-04-26T13:43:12.013Z",
+	"collection_id": "52960692-6292-4733-8554-a62f4b461cf3",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "53477866-ae02-4ad5-bc57-08da8d6a0be5",
+			"name": "1.0 Login as Admin",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/user/login",
+			"time": 15,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				15
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "28f63f3b-e98c-4eec-87af-b1839cde97c0",
+			"name": "1.1 Handyliste anzeigen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/list",
+			"time": 28,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				28
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "dade97c1-8249-4c9f-a98d-04443517772a",
+			"name": "1.2 Ein Handy lesen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/read?uuid=7fd86b92-4b48-4322-aa79-f70cc1f2595f",
+			"time": 36,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				36
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "42e80972-891b-4358-83d7-fe4755384f6d",
+			"name": "1.3 Neues Handy einfügen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+			"time": 41,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				41
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c08c6cc9-09e9-4367-83d3-87d53895ac9a",
+			"name": "1.4 Neues Handy updaten",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+			"time": 240,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				240
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e1f823fc-5d3b-4156-abfe-8833da5d0b88",
+			"name": "1.5 Neues Handy löschen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/delete?phoneUUID=81b4b397-9d54-41b9-917e-6de4d0cc3c57",
+			"time": 99,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				99
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "abda446b-abc8-4cf3-b4ec-2cc26d312b84",
+			"name": "2.1 Unbekanntes Handy lesen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/read?uuid=ab27c9b3-9f28-4931-80a8-66949b8fd1c9",
+			"time": 50,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				50
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "42fc91fd-274d-44fe-abf1-ef7597bfd2ca",
+			"name": "2.2 Unbekanntes Handy löschen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/delete?phoneUUID=ab27c9b3-9f28-4931-80a8-66949b8fd1c9",
+			"time": 114,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				114
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ef87f3b5-dab2-451f-96cd-f64b02fed1dd",
+			"name": "2.3 Unbekanntes Handy ändern",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+			"time": 30,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				30
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e847226f-4ca8-4848-bbc0-eef393d15d62",
+			"name": "3.1 Formal falsche Eingabewerte händy einfügen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+			"time": 64,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				64
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "988e2912-b274-4283-a9e6-29f22500517c",
+			"name": "3.2 Formal falsche Eingabewerte händy einfügen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+			"time": 104,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				104
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a2ade809-3e91-4463-b67c-2aea7a87ffc6",
+			"name": "3.3 Formal falsche Eingabewerte händy einfügen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+			"time": 66,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				66
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "44644409-4c70-4b19-b372-f862db7efddb",
+			"name": "3.4 Formal falsche Eingabewerte händy einfügen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+			"time": 165,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				165
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1902599f-aecd-4065-8f4e-eb2a98dcf23b",
+			"name": "3.5 Formal falsche Eingabewerte händy einfügen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+			"time": 266,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				266
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5021da6e-9ec7-4329-a9da-25879998db43",
+			"name": "3.6 Formal falsche Eingabewerte händy einfügen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+			"time": 104,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				104
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0e2b0cf5-d18d-4427-96a5-67ebde59e235",
+			"name": "3.7 Formal falsche Eingabewerte händy einfügen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+			"time": 90,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				90
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6175cf07-10a2-4216-8c2e-aaf2457d78b2",
+			"name": "3.8 Formal falsche Eingabewerte händy einfügen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+			"time": 202,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				202
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "bc217de4-9b3d-447f-9dd4-99e0ca9fae42",
+			"name": "3.9 Formal falsche Eingabewerte händy einfügen",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/create",
+			"time": 66,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				66
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "9e7da22d-dd8e-45e8-8dbb-362cedb16aab",
+			"name": "4.1 Neues Handy updaten",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+			"time": 28,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				28
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f0ca4b22-a063-4d33-a636-a7ba2f7def1c",
+			"name": "4.2 Neues Handy updaten",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+			"time": 21,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				21
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fa788cb4-2fd9-4ea7-b445-827103798286",
+			"name": "4.3 Neues Handy updaten",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+			"time": 183,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				183
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "14fea0f5-d7b9-439a-9127-428a6d177314",
+			"name": "4.4 Neues Handy updaten",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+			"time": 174,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				174
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c096715a-94df-41db-8e23-08d44b3541ae",
+			"name": "4.5 Neues Handy updaten",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+			"time": 195,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				195
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0914a060-661d-477d-9af4-218b79f3f740",
+			"name": "4.6 Neues Handy updaten",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+			"time": 78,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				78
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "45485e30-f5a5-44ae-adae-2261727fc864",
+			"name": "4.7 Neues Handy updaten",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+			"time": 46,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				46
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fd20aa1c-b583-478a-9af2-c36f9c6ab9ba",
+			"name": "4.8 Neues Handy updaten",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+			"time": 117,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				117
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a75ea428-2a11-409f-a615-dc5e80f468bf",
+			"name": "4.9 Neues Handy updaten",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/update",
+			"time": 128,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				128
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6fd2bb6e-bf51-4d91-b480-5e699b077a1e",
+			"name": "5.1 Formal falsche Eingabewerte",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/delete?phoneUUID=81b4b397-9d54-41b9-917e6de",
+			"time": 55,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				55
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "db377ad3-4cde-477e-8243-d08c50bef018",
+			"name": "5.2 Formal falsche Eingabewerte",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/phones/delete?phoneUUID=81b4b397-9d54-41b9-917e6de-asddkj",
+			"time": 25,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				25
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "19c89c01-994d-46c9-a709-b47aa1129648",
+			"name": "6.0 Logout as Admin",
+			"url": "http://localhost:8080/Handy_Laden_war_exploded/resource/user/logout",
+			"time": 150,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				150
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2980,
+	"collection": {
+		"requests": [
+			{
+				"id": "53477866-ae02-4ad5-bc57-08da8d6a0be5",
+				"method": "POST"
+			},
+			{
+				"id": "28f63f3b-e98c-4eec-87af-b1839cde97c0",
+				"method": "GET"
+			},
+			{
+				"id": "dade97c1-8249-4c9f-a98d-04443517772a",
+				"method": "GET"
+			},
+			{
+				"id": "42e80972-891b-4358-83d7-fe4755384f6d",
+				"method": "POST"
+			},
+			{
+				"id": "c08c6cc9-09e9-4367-83d3-87d53895ac9a",
+				"method": "PUT"
+			},
+			{
+				"id": "e1f823fc-5d3b-4156-abfe-8833da5d0b88",
+				"method": "DELETE"
+			},
+			{
+				"id": "abda446b-abc8-4cf3-b4ec-2cc26d312b84",
+				"method": "GET"
+			},
+			{
+				"id": "42fc91fd-274d-44fe-abf1-ef7597bfd2ca",
+				"method": "DELETE"
+			},
+			{
+				"id": "ef87f3b5-dab2-451f-96cd-f64b02fed1dd",
+				"method": "PUT"
+			},
+			{
+				"id": "e847226f-4ca8-4848-bbc0-eef393d15d62",
+				"method": "POST"
+			},
+			{
+				"id": "988e2912-b274-4283-a9e6-29f22500517c",
+				"method": "POST"
+			},
+			{
+				"id": "a2ade809-3e91-4463-b67c-2aea7a87ffc6",
+				"method": "POST"
+			},
+			{
+				"id": "44644409-4c70-4b19-b372-f862db7efddb",
+				"method": "POST"
+			},
+			{
+				"id": "1902599f-aecd-4065-8f4e-eb2a98dcf23b",
+				"method": "POST"
+			},
+			{
+				"id": "5021da6e-9ec7-4329-a9da-25879998db43",
+				"method": "POST"
+			},
+			{
+				"id": "0e2b0cf5-d18d-4427-96a5-67ebde59e235",
+				"method": "POST"
+			},
+			{
+				"id": "6175cf07-10a2-4216-8c2e-aaf2457d78b2",
+				"method": "POST"
+			},
+			{
+				"id": "bc217de4-9b3d-447f-9dd4-99e0ca9fae42",
+				"method": "POST"
+			},
+			{
+				"id": "9e7da22d-dd8e-45e8-8dbb-362cedb16aab",
+				"method": "PUT"
+			},
+			{
+				"id": "f0ca4b22-a063-4d33-a636-a7ba2f7def1c",
+				"method": "PUT"
+			},
+			{
+				"id": "fa788cb4-2fd9-4ea7-b445-827103798286",
+				"method": "PUT"
+			},
+			{
+				"id": "14fea0f5-d7b9-439a-9127-428a6d177314",
+				"method": "PUT"
+			},
+			{
+				"id": "c096715a-94df-41db-8e23-08d44b3541ae",
+				"method": "PUT"
+			},
+			{
+				"id": "0914a060-661d-477d-9af4-218b79f3f740",
+				"method": "PUT"
+			},
+			{
+				"id": "45485e30-f5a5-44ae-adae-2261727fc864",
+				"method": "PUT"
+			},
+			{
+				"id": "fd20aa1c-b583-478a-9af2-c36f9c6ab9ba",
+				"method": "PUT"
+			},
+			{
+				"id": "a75ea428-2a11-409f-a615-dc5e80f468bf",
+				"method": "PUT"
+			},
+			{
+				"id": "6fd2bb6e-bf51-4d91-b480-5e699b077a1e",
+				"method": "DELETE"
+			},
+			{
+				"id": "db377ad3-4cde-477e-8243-d08c50bef018",
+				"method": "DELETE"
+			},
+			{
+				"id": "19c89c01-994d-46c9-a709-b47aa1129648",
+				"method": "DELETE"
+			}
+		]
+	}
+}
